@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css"/>
+    <title>test</title>
+</head>
+<body>
+<span class="js-weather"></span>
+ <div class="js-clock">
+     <h1>00:00</h1>
+ </div>
+ <form class="js-form form">
+    <input type="" placeholder="what is your name?" />
+  </form>
+  <h2 class="js-greetings greetings"></h2>
+
+ <form class="js-focus-today jsfocus">
+    <h3 class="todayText">What is your main focus for today?</h3>
+    <div><input class="inputform focus-today"type="text"/></div>
+ </form>
+
+<div class="yourFocus yrFocus">
+    <input class="js-check-box checkbox" type="checkbox" onclick="checkBoxEvent()"/>
+    <h3 class="js-focus focus"></h3> 
+    <span class="js-plusBtn plusBtn">+</span>
+</div>
+
+<form class="js-toDoForm">
+    <input type="text" placeholder="Write a to do" />
+  </form>
+<ul class="js-toDoList"></ul>
+
+
+    
+<script src="src/clock.js"></script>
+<script src="src/focusToday.js"></script> 
+<script src="src/name.js"></script>
+<script src="src/bg.js"></script>
+<script src="src/weather.js"></script>
+<script src="src/todos.js"></script>
+</body>
+</html>

@@ -1,0 +1,239 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+
+body {
+  background-color: #414242;
+}
+
+.form,
+.greeting,
+.yrFocus,
+.plusBtn,
+.focus-today,
+.checkbox,
+.toDoForm {
+  display: none;
+}
+
+.showing {
+  display: block;
+}
+
+.showing2 {
+  display: flex;
+}
+
+.js-plusBtn {
+  margin-top: 0px;
+  margin-left: 10px;
+  width: 20px;
+  height: 20px;
+  font-size: 30px;
+  vertical-align: center;
+  border-radius: 20px;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.js-plusBtn:hover {
+  background-color: gray;
+  opacity: 0.5;
+}
+
+.js-check-box {
+  margin-top: 10px;
+  margin-right: 10px;
+  font-size: 50px;
+}
+
+.js-focus {
+  color: white;
+  font-size: 50px;
+  text-align: center;
+}
+
+.line_one {
+  text-decoration: line-through;
+  text-decoration-color: white;
+  text-decoration-thickness: 600;
+  opacity: 0.7;
+}
+
+.js-clock {
+  padding-top: 300px;
+  margin: 0px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 70px;
+  color: white;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.js-focus-today {
+  margin-top: 40px;
+  position: relative;
+}
+.js-focus-today h3 {
+  width: 100%;
+  color: white;
+  font-size: 34px;
+  text-align: center;
+}
+
+.js-focus-today div {
+  margin-top: 20px;
+  width: 590px;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+
+.inputform {
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid white;
+  background: transparent;
+  font-size: 50px;
+  text-align: center;
+  caret-color: white;
+  color: white;
+  margin-left: 670px;
+}
+
+.yourFocus {
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.js-greetings {
+  margin-top: 10px;
+  justify-content: center;
+  text-align: center;
+  align-items: cetner;
+  color: white;
+  font-size: 45px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.js-form {
+  margin-top: 14px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.js-form input {
+  border: none;
+  border-bottom: 2px solid white;
+  font-size: 50px;
+  background: transparent;
+  text-align: center;
+  caret-color: white;
+  color: white;
+  margin-left: 670px;
+}
+.js-form input::placeholder {
+  color: white;
+  opacity: 0.5;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.bgImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  animation: fadeIn 0.7s linear;
+}
+
+.js-weather {
+  display: block;
+  align-items: right;
+  text-align: right;
+  opacity: 0.8;
+  color: white;
+  margin-right: 0px;
+  font-size: 18px;
+  border-radius: 10px;
+}
+
+.todoBtn {
+  margin-top: 140px;
+  display: block;
+  align-items: right;
+  text-align: right;
+  color: white;
+  font-size: 18px;
+}
+
+.js-toDoList {
+  list-style: none;
+}
+
+.js-toDoForm {
+  display: block;
+}
+.js-toDoForm input {
+  border: none;
+  border-bottom: 2px solid white;
+  background: transparent;
+  font-size: 20px;
+  caret-color: white;
+  color: white;
+  margin-left: 20px;
+  margin-top: 100px;
+}
+
+.js-toDoForm input::placeholder {
+  color: white;
+  opacity: 0.7;
+}
+
+.decobuttons {
+  width: 28px;
+  color: white;
+  text-align: center;
+  display: inline-block;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  font-weight: 400;
+  font-size: 23px;
+  border-radius: 14px;
+  opacity: 0.9;
+}
+
+.decobuttons:hover {
+  background-color: red;
+  opacity: 0.3;
+}
+
+.decotext {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font: size 25px;
+  color: white;
+}
