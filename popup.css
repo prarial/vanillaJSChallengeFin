@@ -4,10 +4,10 @@
   margin-top: 10px;
   margin-left: 1820px;
   font-size: 20px;
-  cursor: pointer;
 }
 .dotoBtn:hover {
   font-weight: 600;
+  cursor: pointer;
 }
 
 .js-toDoFormWrap {
