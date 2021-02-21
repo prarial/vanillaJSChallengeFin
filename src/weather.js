@@ -1,4 +1,5 @@
 const weather = document.querySelector(".js-weather");
+const weatherPlace = document.querySelector(".js-weather-place");
 const API_KEY = "dfbcf8bd7e35f7bfe5e6cea1de4873a7";
 const COORDS = "coords";
 
@@ -10,9 +11,11 @@ function getWeather(lat, lon) {
       return response.json();
     })
     .then(function (json) {
+      const weatherToday = json.weather[0].main;
       const temperature = json.main.temp;
       const place = json.name;
-      weather.innerText = `${temperature}℃  ${place}`;
+      weather.innerText = `${temperature}℃ / ${weatherToday}   `;
+      weatherPlace.innerText = ` ${place}`;
     });
 }
 
@@ -27,12 +30,13 @@ function handleGeoSucces(position) {
     latitude,
     longitude,
   };
+
   saveCoords(coordsObj);
   getWeather(latitude, longitude);
 }
 
 function handleGeoError() {
-  console.log("Cant access geo location");
+  console.log("Can't access geo location");
 }
 
 function askForCoords() {

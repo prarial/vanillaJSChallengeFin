@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap");
+@import "popup.css";
 
 * {
   margin: 0;
@@ -8,12 +9,40 @@
 
 body {
   background-color: #414242;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+button {
+  width: 1rem;
+  height: 1rem;
+  margin: 0.5rem;
+  border-radius: 50%;
+  flex-shrink: 0;
+  position: relative;
+  border: none;
+  background-color: #e74c3c;
+  padding: 0.7rem;
+  box-sizing: content-box;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  justify-items: center;
+}
+
+.color {
+  color: red;
+  display: none;
 }
 
 .form,
 .greeting,
-.yrFocus,
+.greetBtn,
 .plusBtn,
+.yrFocus,
 .focus-today,
 .checkbox,
 .toDoForm {
@@ -28,36 +57,69 @@ body {
   display: flex;
 }
 
+.animtaionOne {
+  animation: neon 1s ease infinite;
+  -moz-animation: neon 1s ease infinite;
+  -webkit-animation: neon 1s ease infinite;
+}
+
+@keyframes blink {
+  0% {
+    color: #e74c3c;
+  }
+  20% {
+    color: #e67e22;
+  }
+  40% {
+    color: #f1c40f;
+  }
+  60% {
+    color: #2ecc71;
+  }
+  80% {
+    color: #3498db;
+  }
+  100% {
+    color: #8e44ad;
+  }
+}
+
 .js-plusBtn {
   margin-top: 0px;
-  margin-left: 10px;
-  width: 20px;
-  height: 20px;
+  margin-left: 15px;
+  width: 15px;
+  height: 10px;
   font-size: 30px;
   vertical-align: center;
-  border-radius: 20px;
+  border-radius: 12px;
   justify-content: center;
   align-items: center;
   color: white;
   font-weight: 600;
   cursor: pointer;
-  opacity: 0.5;
+  opacity: 0.7;
 }
 
 .js-plusBtn:hover {
-  background-color: gray;
-  opacity: 0.5;
+  color: #c0392b;
+  opacity: 0.9;
+}
+
+.js-plusBtn:active {
+  color: #27ae60;
+  opacity: 0.9;
 }
 
 .js-check-box {
   margin-top: 10px;
   margin-right: 10px;
-  font-size: 50px;
+  font-size: 32px;
+  cursor: pointer;
 }
 
 .js-focus {
   color: white;
-  font-size: 50px;
+  font-size: 32px;
   text-align: center;
 }
 
@@ -69,26 +131,29 @@ body {
 }
 
 .js-clock {
-  padding-top: 300px;
-  margin: 0px;
+  margin-top: 255px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-size: 70px;
-  color: white;
+  font-size: 65px;
+  font-weight: 300;
+  color: #f5f6fa;
   justify-content: center;
-  text-align: center;
   align-items: center;
+  justify-items: center;
+  text-align: center;
 }
 
 .js-focus-today {
-  margin-top: 40px;
+  margin-top: 20px;
   position: relative;
+  font-size: 20px;
 }
 .js-focus-today h3 {
   width: 100%;
-  color: white;
-  font-size: 34px;
+  color: #f5f6fa;
+  font-size: 32px;
   text-align: center;
+  margin-bottom: 6px;
 }
 
 .js-focus-today div {
@@ -102,12 +167,12 @@ body {
 .inputform {
   width: 100%;
   border: none;
-  border-bottom: 2px solid white;
+  border-bottom: 1px solid #f5f6fa;
   background: transparent;
   font-size: 50px;
   text-align: center;
-  caret-color: white;
-  color: white;
+  caret-color: #f5f6fa;
+  color: #f5f6fa;
   margin-left: 670px;
 }
 
@@ -119,16 +184,38 @@ body {
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-.js-greetings {
-  margin-top: 10px;
+.nameWrap {
+  display: flex;
+  margin-bottom: 125px;
   justify-content: center;
   text-align: center;
   align-items: cetner;
-  color: white;
+}
+
+.js-greetings {
+  display: flex;
+
+  margin-top: 10px;
+  text-align: center;
+  color: #f5f6fa;
   font-size: 45px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
+
+.js-greeingsBtn {
+  font-size: 10px;
+  font-weight: 500;
+  margin-top: 24px;
+  margin-left: 15px;
+  color: #f5f6fa;
+}
+
+.greeingsBtn:active {
+  background-color: #c0392b;
+  border-color: #e67e22;
+}
+
 .js-form {
   margin-top: 14px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
@@ -137,16 +224,16 @@ body {
 
 .js-form input {
   border: none;
-  border-bottom: 2px solid white;
+  border-bottom: 2px solid #f5f6fa;
   font-size: 50px;
   background: transparent;
   text-align: center;
-  caret-color: white;
-  color: white;
+  caret-color: #f5f6fa;
+  color: #f5f6fa;
   margin-left: 670px;
 }
 .js-form input::placeholder {
-  color: white;
+  color: #f5f6fa;
   opacity: 0.5;
 }
 
@@ -170,14 +257,27 @@ body {
 }
 
 .js-weather {
-  display: block;
-  align-items: right;
-  text-align: right;
+  margin-top: 5px;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  text-align: center;
   opacity: 0.8;
-  color: white;
-  margin-right: 0px;
-  font-size: 18px;
+  color: #ecf0f1;
+  justify-content: center;
+  font-size: 25px;
   border-radius: 10px;
+}
+
+.js-weather-place {
+  margin-left: 50px;
+  margin-top: 40px;
+  display: flex;
+  color: #ecf0f1;
+  font-size: 15px;
+  opacity: 0.8;
+  align-items: center;
+  justify-content: center;
 }
 
 .todoBtn {
@@ -185,55 +285,54 @@ body {
   display: block;
   align-items: right;
   text-align: right;
-  color: white;
+  color: black;
   font-size: 18px;
 }
 
-.js-toDoList {
-  list-style: none;
-}
-
-.js-toDoForm {
-  display: block;
-}
-.js-toDoForm input {
-  border: none;
-  border-bottom: 2px solid white;
-  background: transparent;
-  font-size: 20px;
-  caret-color: white;
-  color: white;
-  margin-left: 20px;
-  margin-top: 100px;
-}
-
-.js-toDoForm input::placeholder {
-  color: white;
-  opacity: 0.7;
-}
-
 .decobuttons {
-  width: 28px;
-  color: white;
+  color: red;
   text-align: center;
   display: inline-block;
   cursor: pointer;
   border: none;
   background: transparent;
   font-weight: 400;
-  font-size: 23px;
+  font-size: 15px;
   border-radius: 14px;
   opacity: 0.9;
-}
-
-.decobuttons:hover {
-  background-color: red;
-  opacity: 0.3;
 }
 
 .decotext {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font: size 25px;
-  color: white;
+  color: black;
+}
+
+.decotext:hover {
+  color: #2ecc71;
+}
+
+.footer {
+  font-size: 19px;
+  display: flex;
+  position: fixed;
+  color: #f5f6fa;
+  justify-content: center;
+  bottom: 15px;
+  width: 100%;
+}
+
+@keyframes neon {
+  0%,
+  100% {
+    text-shadow: 0 0 1vw #fa1c16, 0 0 3vw #fa1c16, 0 0 10vw #fa1c16,
+      0 0 10vw #fa1c16, 0 0 0.4vw #fed128, 0.5vw 0.5vw 0.1vw #806914;
+    color: #fed128;
+  }
+  50% {
+    text-shadow: 0 0 0.5vw #800e0b, 0 0 1.5vw #800e0b, 0 0 5vw #800e0b,
+      0 0 5vw #800e0b, 0 0 0.2vw #800e0b, 0.5vw 0.5vw 0.1vw #40340a;
+    color: #806914;
+  }
 }

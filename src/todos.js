@@ -1,19 +1,31 @@
 const toDoForm = document.querySelector(".js-toDoForm"),
   toDoInput = toDoForm.querySelector("input"),
-  toDOList = document.querySelector(".js-toDoList");
+  toDOList = document.querySelector(".js-toDoList"),
+  toDoButton = document.querySelector(".dotoBtn"),
+  toDoVisual = document.querySelector(".js-toDoFormWrap");
 
 const TODOS_LS = "toDos";
 const DECOBUTTON = "decobuttons";
 const DECOTEXT = "decotext";
 const DECOLI = "decoli";
+const ACTIVE = "active";
 
+function handleClick() {
+  if (control === "true") {
+    toDoVisual.classList.add(ACTIVE);
+    control = "false";
+  } else {
+    toDoVisual.classList.remove(ACTIVE);
+    control = "true";
+  }
+}
 
 function filterFn(toDo) {
   return toDo.id === 1;
 }
 
-let toDos = [];
-
+let toDos = [],
+  control = "true";
 
 function deleteToDo(event) {
   const btn = event.target;
@@ -32,16 +44,15 @@ function saveToDos() {
 
 function paintToDo(text) {
   const li = document.createElement("li");
-  const delBtn = document.createElement("button");
   const span = document.createElement("span");
+  const delBtn = document.createElement("button");
   const newId = toDos.length + 1;
-  delBtn.innerText = "x";
-  delBtn.classList.add(DECOBUTTON);
+  delBtn.innerText = "🧺";
   span.classList.add(DECOTEXT);
-
+  delBtn.classList.add(DECOBUTTON);
   li.classList.add(DECOLI);
   delBtn.addEventListener("click", deleteToDo);
-  
+
   span.innerText = text;
   li.appendChild(delBtn);
   li.appendChild(span);
@@ -76,6 +87,7 @@ function loadToDos() {
 function init() {
   loadToDos();
   toDoForm.addEventListener("submit", handleSubmit);
+  toDoButton.addEventListener("click", handleClick);
 }
 
 init();

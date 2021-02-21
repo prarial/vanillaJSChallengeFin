@@ -1,44 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css"/>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
     <title>test</title>
-</head>
-<body>
-<span class="js-weather"></span>
- <div class="js-clock">
-     <h1>00:00</h1>
- </div>
- <form class="js-form form">
-    <input type="" placeholder="what is your name?" />
-  </form>
-  <h2 class="js-greetings greetings"></h2>
+  </head>
+  <body>
+    <header class="header">
+      <div class="js-weatherWrap">
+        <div class="js-weather"></div>
+        <div class="js-weather-place"></div>
+      </div>
+      <div class="dotoBtn">TODO</div>
+      <div class="js-toDoFormWrap">
+        <div class="js-toDoFormWrapWrap">
+          <form class="js-toDoForm">
+            <input type="text" placeholder="Write a to do" />
+          </form>
+          <ul class="js-toDoList"></ul>
+        </div>
+      </div>
+    </header>
 
- <form class="js-focus-today jsfocus">
-    <h3 class="todayText">What is your main focus for today?</h3>
-    <div><input class="inputform focus-today"type="text"/></div>
- </form>
+    <div class="js-clock">
+      <h1>00:00</h1>
+      <div class="nameWrap">
+        <h2 class="js-greetings greetings"></h2>
+        <button class="js-greeingsBtn greetBtn">Go</button>
+      </div>
+    </div>
+    <form class="js-form form">
+      <input type="" placeholder="what is your name?" />
+    </form>
 
-<div class="yourFocus yrFocus">
-    <input class="js-check-box checkbox" type="checkbox" onclick="checkBoxEvent()"/>
-    <h3 class="js-focus focus"></h3> 
-    <span class="js-plusBtn plusBtn">+</span>
-</div>
+    <form class="js-focus-today jsfocus">
+      <h3 class="todayText">What is your main focus for today?</h3>
+      <div><input class="inputform focus-today" type="text" /></div>
+    </form>
 
-<form class="js-toDoForm">
-    <input type="text" placeholder="Write a to do" />
-  </form>
-<ul class="js-toDoList"></ul>
+    <div class="yourFocus yrFocus">
+      <input
+        class="js-check-box checkbox"
+        type="checkbox"
+        onclick="checkBoxEvent()"
+      />
+      <h4 class="js-focus focus"></h4>
+      <span class="js-plusBtn plusBtn">x</span>
+    </div>
 
+    <footer class="footer">
+      <div class="wise-saying">
+        “A champion is defined not by their wins, but by how many times they
+        recover when they fall.”
+      </div>
+    </footer>
 
-    
-<script src="src/clock.js"></script>
-<script src="src/focusToday.js"></script> 
-<script src="src/name.js"></script>
-<script src="src/bg.js"></script>
-<script src="src/weather.js"></script>
-<script src="src/todos.js"></script>
-</body>
+    <script src="src/clock.js"></script>
+    <script src="src/focusToday.js"></script>
+    <script src="src/name.js"></script>
+    <script src="src/bg.js"></script>
+    <script src="src/weather.js"></script>
+    <script src="src/todos.js"></script>
+  </body>
 </html>
